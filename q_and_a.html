@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+    <title>
+                Q & A | Zerocash 
+        </title>
+    <meta name="description" content="">
+    <meta name="author" content="The Zerocash Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <link href="/media/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/media/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/media/css/style.css" rel="stylesheet">
+    <link href="/media/css/stickyfooter.css" rel="stylesheet">
+    <link href="/media/css/nav.css" rel="stylesheet">
+    <link href="/media/css/typography.css" rel="stylesheet">
+    
+        
+
+
+                
+        
+            <script>
+  var _gaq = [['_setAccount', 'UA-47912220-1'], ['_trackPageview']];
+  (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+  }(document, 'script'));
+</script>
+      </head>
+
+  <body class="q_and_a">
+    
+    <div id="wrap"> <!-- Wrap for sticky footer -->
+
+            <div class="row-fluid">
+                <div class="span7 offset3">  
+
+                      
+                    <div class="navbar">
+<a class="btn btn-navbar collapsed" data-align="left" data-toggle="collapse" data-target="#foobar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+                        
+                    <div class="nav-collapse" id="foobar">
+                                                <ul class="nav">
+<li><a href="index">Overview</a></li><li><a href="how_zerocash_works">Technology</a></li><li class="active"><a href="q_and_a">Q and A</a></li><li><a href="paper">Paper</a></li><li><a href="talks_and_media">Talks & Media</a></li><li><a href="about_us">About Us</a></li></ul>
+                    <div class="pull-right twitter-div" >
+<a href="https://twitter.com/zerocashproject" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @zerocashproject</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+
+                     </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid banner">
+                <div class="span6 offset3" />
+                                        <h1>
+                        <a class="brand" href="index.html">
+                            Zerocash
+                        </a> 
+                    </h1>
+                                    </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span6 offset3">
+                            
+
+      <h3></h3>
+<div class="toc">
+<ul>
+<li><a href="#what-is-bitcoin">What is Bitcoin?</a></li>
+<li><a href="#what-is-bitcoins-privacy-problem">What is Bitcoin's privacy problem?</a></li>
+<li><a href="#why-do-i-want-privacy-for-my-finances">Why do I want privacy for my finances?</a></li>
+<li><a href="#why-do-i-need-fungibility">Why do I need fungibility?</a></li>
+<li><a href="#what-about-mixing-services">What about mixing services?</a></li>
+<li><a href="#what-are-the-privacy-needs-of-legitimate-users">What are the privacy needs of legitimate users?</a></li>
+<li><a href="#how-does-zerocash-help">How does Zerocash help?</a></li>
+<li><a href="#what-does-zerocash-do">What does Zerocash do?</a></li>
+<li><a href="#what-types-of-transactions-does-zerocash-use">What types of transactions does Zerocash use?</a></li>
+<li><a href="#how-are-zerocash-transactions-checked-for-correctness">How are Zerocash transactions checked for correctness?</a></li>
+<li><a href="#how-will-zerocash-be-released-and-deployed">How will Zerocash be released and deployed?</a></li>
+<li><a href="#what-about-criminal-use-of-zerocash">What about criminal use of Zerocash?</a></li>
+<li><a href="#what-about-the-balance-between-accountability-and-privacy">What about the balance between accountability and privacy?</a></li>
+<li><a href="#can-one-put-a-backdoor-in-zerocash">Can one put a backdoor in Zerocash?</a></li>
+</ul>
+</div>
+<h3 id="what-is-bitcoin">What is Bitcoin?</h3>
+<p><a href="https://bitcoin.org/en/">Bitcoin</a> is the first widely adopted digital currency. It enables near-instantaneous payments between any two Bitcoin users anywhere in the world, with negligible fees and no risk of reverted transactions.</p>
+<p>Like all electronic payment systems, Bitcoin needs a mechanism to ensure the integrity of the transactions (e.g., to prevent a rogue user from paying the same digital "coin" to multiple merchants). Traditional electronic payment systems achieve this by relying on a trusted central party, such as a bank. Bitcoin avoids such centralized trust (and the overhead associated with it); instead, Bitcoin uses a distributed ledger, known as the <em><a href="https://blockchain.info/">block chain</a></em>, to store users' transactions. The block chain is maintained and updated by consensus across the pool of (mutually-distrustful) participants, using an Internet protocol that is very hard to subvert.</p>
+<p>Any user can, at any time, directly pay any other user, by broadcasting a payment transaction in the Bitcoin network. The recipient checks this transaction against prior ones in the block chain, to verify that the sent funds have a valid provenance and are not duplicated (i.e., spent multiple times).</p>
+<h3 id="what-is-bitcoins-privacy-problem">What is Bitcoin's privacy problem?</h3>
+<p>Bitcoin suffers from a major limitation: because the block chain is public, the history of <em>all</em> payment transactions ever made is readily available to anyone. This is problematic because a payment transaction specifies not only the amount paid but also the payment's origin and destination <em><a href="https://en.bitcoin.it/wiki/Address">addresses</a></em>. Some users use a single address, which is revealed to anyone they send a payment to or accept a payment from. This compromises the privacy of consumers and merchants alike:</p>
+<ul>
+<li>As a consumer, all information about your purchases (timing, amounts, and merchant addresses) can be seen by your friends, neighbors, and co-workers; in fact, even your merchant can observe your account balance.</li>
+<li>As a merchant, all information about your cash flow can be seen by all your customers and competitors.</li>
+</ul>
+<p>Many users mitigate the aforementioned problem by generating many different addresses to handle separate payments. However, doing so is not only awkward but also prone to analysis. Indeed, anyone can deduce from the block chain the <em>transaction graph</em> and use it to trace the history of a given payment --- even years after it occurred --- and possibly de-anonymize a user's addresses by linking them to a specific party in the real world. Such fears are not theoretical: an increasing body of research shows that de-anonymization is a real concern. (See, e.g., <a href="http://arxiv.org/abs/1107.4524">RM11</a>, <a href="http://crypto.stanford.edu/~xb/fc12/bitcoin.pdf">BBSU12</a>, <a href="https://eprint.iacr.org/2012/584">RS12</a>, and <a href="http://cseweb.ucsd.edu/~smeiklejohn/files/imc13.pdf">MPJLMVS13</a>.)</p>
+<p>Thus, Bitcoin is, in many ways, less private than a bank account. With a bank, you only disclose your finances to the bank and its designees; with Bitcoin, you disclose them to the whole world.</p>
+<h3 id="why-do-i-want-privacy-for-my-finances">Why do I want privacy for my finances?</h3>
+<p>Would you want to post your credit card and bank statement for everyone to see? Of course not: people can learn a lot of personal information from your spending habits. In addition to the obvious things like your salary, people can likely infer other intimate details about your life. The problem is that Bitcoin makes precisely this kind of information public. While Bitcoin's usage is not yet sufficiently widespread to conclusively say what one might do with such data, we can look at what one can do with financial transaction and purchase history in general get some idea of what is yet to come.</p>
+<p>If your credit-card/debit-card transactions were public, many private details of your life would be directly revealed. For example, anyone could determine from your payments to a psychiatrist that you have a mental health issue.</p>
+<p>Once marketing and advertising firms begin data-mining Bitcoin transactions in earnest, we can only imagine what other privacy intrusions they will dream up from things the data indirectly reveals. This is not as far fetched as it sounds.</p>
+<p>The New York Times <a href="http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&amp;_r=0">reported</a> that Target can predict very personal information from your shopping habits. In one extreme example, data analysts working for the store were able to predict that female shoppers were pregnant, even before the women themselves were aware of it. Worse, the resulting coupons for baby products that were sent in the mail could reveal the pregnancy to others. The article mentions a father who discovered his teenage daughter's pregnancy in exactly this manner. </p>
+<p>Of course, Target knew exactly what people were purchasing, which is more than just the charge amount and merchant name that you would get from a credit card statement or Bitcoin's block chain. On the other hand, they had only data from Target --- the analyst's job would be a lot easier if in addition to purchase history at Target, they saw payments to ultrasound clinics and OBGYNs. The point is two-fold: (1) seemingly inconsequential data can reveal very private information; and (2) companies have incentives to mine through this kind of data and extract that information. </p>
+<h3 id="why-do-i-need-fungibility">Why do I need fungibility?</h3>
+<p>The provenance of your money should be kept private to ensure its <em>fungibility</em>.</p>
+<p>If your money has a history, it may not be "valid for all debts, public and private", because someone may not like where it came from. To a limited extent this has already become an issue within the Bitcoin system: a number of Bitcoin exchanges have "blacklisted" certain coins following major wallet thefts. While this form of coin marking seems harmless -- and even beneficial -- it creates an added burden on users to verify the provenance of received payments.</p>
+<p>The concern in Bitcoin is that the same techniques could be used to achieve more significant ends. Imagine, when purchasing something at a store, that the cashier refuses to accept your money because some previous owner of the currency has used the coin to conduct an illegal (or merely controversial) transaction Now, through no fault of your own, you find that your money is worth less than you expected. With cash, a credit card, or a debit card, this is not possible since neither the cashier nor the merchant can see where you got the money from. With Bitcoin, this information is easy to look up. </p>
+<h3 id="what-about-mixing-services">What about mixing services?</h3>
+<p>Users with sufficient motivation can make use of <em><a href="https://en.bitcoin.it/wiki/Mixing_service">mixes</a></em> (also known as <em>laundries</em> or <em>tumblers</em>) to enhance their own privacy. A mix allows users to entrust a set of coins to a pool operated by a central party and then, after some interval, retrieve different coins (with the same total value) from the pool; this operation further obfuscates transaction history.</p>
+<p>Mixes, however, suffer from several limitations. First, users must wait to reclaim their coins, in order to allow enough coins to be mixed in the same pool (because the privacy enhancement is only as good as the pool size). Second, users must trust the mix to not steal or trace their coins. Third, users need to actively participate in a mix in order to ensure continuing privacy enhancement. </p>
+<h3 id="what-are-the-privacy-needs-of-legitimate-users">What are the privacy needs of legitimate users?</h3>
+<p>While typical legitimate users worry about their own privacy, they are also risk-averse, do not wish to expend continual effort in protecting their privacy, and are often not sufficiently aware that their privacy has been compromised. Mixes in particular are not an adequate solution because they entail substantial costs, ongoing risks and effort. (In contrast, for users with "something to hide", e.g. criminals, using mixes might be worth the risks and inconvenience.)</p>
+<p>Thus, to protect their day-to-day privacy, legitimate users need an instant, risk-free, and, most importantly, automatic guarantee that data revealing their spending habits and account balances is not publicly accessible by neighbors, co-workers, and merchants.</p>
+<h3 id="how-does-zerocash-help">How does Zerocash help?</h3>
+<p>Zerocash guarantees users' privacy by providing "Zerocash payment transactions" that <strong>do not reveal the payment's origin, destination, or amount</strong> of any transaction. Any transaction is recorded in the ledger as a random-looking string that suffices to ensure the monetary invariants, yet is <em>zero-knowledge</em>: it reveals nothing beyond the fact that, somewhere, some valid transaction occurred.</p>
+<p>Zerocash improves on <a href="http://zerocoin.org/">Zerocoin</a>, work by some of the same authors, both in functionality (Zerocoin only hides a payment's origin) and in efficiency (Zerocash transactions are less than 1KB and take less than 6ms to verify.)</p>
+<h3 id="what-does-zerocash-do">What does Zerocash do?</h3>
+<p>Zerocash is a novel cryptographic payment scheme that creates a separate anonymous currency, existing alongside the (non-anonymous) Bitcoin currency. Each user can convert (non-anonymous) bitcoins into (anonymous) Zerocash coins, which we call <em>zerocoins</em>. Users can then send zerocoins to other users, and split or merge zerocoins they own in any way that preserves the total value. Users can also convert zerocoins back into bitcoins, though in principle this is not necessary: all transactions can be made in terms of zerocoins, if the parties involved support these.</p>
+<h3 id="what-types-of-transactions-does-zerocash-use">What types of transactions does Zerocash use?</h3>
+<p>Zerocash's functionality is realized using just two new types of transactions, <em>mint transactions</em> and <em>pour transactions</em>, which are broadcast and appended to the ledger.</p>
+<p><strong>Mint transactions.</strong>
+A mint transaction allows a user to convert a specified number of bitcoins (from some Bitcoin address) into the same number of zerocoins belonging to a specified Zerocash address. The mint transaction itself consists of a cryptographic commitment to a new coin, which specifies its value and owner address.</p>
+<p><strong>Pour transactions.</strong>
+A pour transaction allows a user to make a private payment, by consuming some number of coins (owned by this user) in order to produce new coins. Roughly, a pour transaction, for two input coins and two output coins, involves proving, in <a href="http://en.wikipedia.org/wiki/Zero-knowledge_proof">zero knowledge</a>, that:</p>
+<ul>
+<li>the user owns the two input coins;</li>
+<li>each one of the input coins appears in some previous mint transaction or as the output coin of some previous pour transaction; and</li>
+<li>the total value of the input coins equals the total value of the output coins.</li>
+</ul>
+<p>The pour transaction consumes the input coins by revealing their serial numbers, but does not reveal any other information such as the values of the input or output coins, or the addresses of their owner.</p>
+<p>Optionally, the pour transaction can also output some (non-anoymous) bitcoins, subject to the constraint that the total output value equal the total input value.</p>
+<h3 id="how-are-zerocash-transactions-checked-for-correctness">How are Zerocash transactions checked for correctness?</h3>
+<p>For a mint transaction, the commitment cointained therein is constructed so that that anyone can verify that the committed coin has the claimed value.</p>
+<p>For a pour transaction, anyone can verify that the zero-knowledge proof contained therein is valid (and that a few other simple invariants hold). For efficiency, however, Zerocash does not use "any" zero-knowledge proof, but leverages <em>zero-knowledge Succinct Non-interactive ARguments of Knowledge</em> (zk-SNARK) systems, which are zero-knowledge proofs that are particularly short and easy to verify. Specifically, Zerocash uses zk-SNARKs constructed by <a href="http://www.scipr-lab.org/">SCIPR Lab</a>, which are described in <a href="http://eprint.iacr.org/2013/879">BCTV13</a>; such proofs are less than 300 bytes long and can be verified in only a few milliseconds.</p>
+<h3 id="how-will-zerocash-be-released-and-deployed">How will Zerocash be released and deployed?</h3>
+<p>We plan to release an altcoin that uses the Zerocash protocol. At present, we are working on finishing a first release of the client software, based on the Bitcoin 0.9.1 codebase. (There is a big difference between research software, and a clien that is working and usable!) Ultimately, we hope to achieve a production-quality client that can be used to create a real privacy-preserving currency.</p>
+<p>For updates, follow <a href="https://twitter.com/zerocashproject" title="Zerocash Project">@ZerocashProject</a> on Twitter or check this website.</p>
+<h3 id="what-about-criminal-use-of-zerocash">What about criminal use of Zerocash?</h3>
+<p>Zerocash's privacy guarantees are designed to benefit legitimate users who do not want their financial details made public. There is a concern, as always, that decentralized anonymous payments will facilitate laundering of ill-gotten funds by criminal users. As we now explain, however, Zerocash barely affects the status quo for criminal users, who already have strong incentives to hide their activity, while it provides notable benefits to legitimate users. </p>
+<p>First, the main difficulty with money laundering does not typically lie in how to privately transfer money from one person to another, but in how to make the eventual income appear legitimate: for regulatory purposes, one still has to present credible sources to justify the income, regardless of the technical means by which it was transferred. In this respect, Zerocash does not help.</p>
+<p>Second, even without the "help" of Zerocash, criminal users can already anonymize their activities via existing financial systems (e.g., by using cash) or Bitcoin (e.g., by using mixes). Thus, the introduction of yet another method to anonymously move money is of little consequence.</p>
+<p>Finally, Bitcoin is increasingly subject to regulation that narrows the gap between it and traditional financial systems. For instance, Bitcoin exchanges are required to identify customers conducting sufficiently-large transfers to/from traditional currencies. Presumably such regulations would apply to Zerocash exchanges as well.</p>
+<h3 id="what-about-the-balance-between-accountability-and-privacy">What about the balance between accountability and privacy?</h3>
+<p>Zerocash extensions can accommodate various choices of balance between accountability and privacy.</p>
+<p>For instance, there are promising techniques for preventing money laundering without violating the
+privacy of legitimate users (e.g., <a href="https://www.cs.jhu.edu/~susan/papers/CHL06.pdf" title="Balancing Accountability and Privacy Using E-Cash ">CHL06</a>). Roughly, the idea is to build the cryptographic protocol so that, once the total amount paid between any two users (over any number of payments) exceeds some public threshold, the payments are not private. Zerocash could incorporate such techniques (though the initial prototype does not do so).</p>
+<p>More generally, the underlying zk-SNARK cryptographic proof machinery is flexible enough to enforce a wide range of policies. It can, for example, let users prove that they paid the taxes due on all transactions, without revealing those transactions, their amounts, or even the amount of taxes paid. As long as the policy can be specified by efficient "nondeterministic" computation, it can (in principle) be enforced using zk-SNARKs and added to Zerocash. This can help to verify and enforce a wide range of compliance and regulatory policies in manner that is non-invasive to privacy. Morever, once codified, policies will be enforced even in the presence of corrupt employees among the authorities.</p>
+<p>This raises intriguing research, policy, and engineering questions over what policies are desirable and practically realizable.</p>
+<h3 id="can-one-put-a-backdoor-in-zerocash">Can one put a backdoor in Zerocash?</h3>
+<p>Zerocash requires a trusted entity to conduct a one-time setup of the parameters of the system. During the setup procedure, secret random bits are drawn and used to compute the public parameters; the random bits are then destroyed, and the parameters are broadcast. If done correctly, then no secrets or backdoors remain.</p>
+<p>If this setup procedure were to be corrupted, the system would continue to provide anonymity guarantees, but it would be possible to "forge" coins. As long as this setup procedure is conducted honestly, it is not possible to corrupt the public parameters of the system.</p>
+<p>A different question is the possibility of bugs in the code. Such bugs need to be found and resolved via extensive review and testing, as in any other software project. To facilitate this, Zerocash will be released as open-source software.</p>
+
+                </div>
+            </div>
+        <div id="push"></div> <!-- for sticky footer-->
+    </div> <!-- / sticky footer wrap -->
+
+    <div id ="footer" class="row-fluid footer">
+        <div class="span6 offset3">
+                <!--
+        <p>Created by <a href="">The Zerocash Team</a> <a href="https://twitter.com/">@</a></p>
+        -->
+        
+         </div>
+    </div>
+    
+        
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
+    <script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
+        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+            
+        
+
+    <!--[if lt IE 7 ]>
+      <script src="/media/js/libs/dd_belatedpng.js"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
+
+
+
+      </body>
+</html>

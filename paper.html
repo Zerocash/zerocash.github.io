@@ -4,7 +4,7 @@
   <head>
         <meta charset="utf-8">
     <title>
-                Zerocash | Zerocash 
+                Paper | Zerocash 
         </title>
     <meta name="description" content="">
     <meta name="author" content="The Zerocash Team">
@@ -36,7 +36,7 @@
 </script>
       </head>
 
-  <body class="index">
+  <body class="paper">
     
     <div id="wrap"> <!-- Wrap for sticky footer -->
 
@@ -53,7 +53,7 @@
                         
                     <div class="nav-collapse" id="foobar">
                                                 <ul class="nav">
-<li class="active"><a href="index">Overview</a></li><li><a href="how_zerocash_works">Technology</a></li><li><a href="q_and_a">Q and A</a></li><li><a href="paper">Paper</a></li><li><a href="talks_and_media">Talks & Media</a></li><li><a href="about_us">About Us</a></li></ul>
+<li><a href="index">Overview</a></li><li><a href="how_zerocash_works">Technology</a></li><li><a href="q_and_a">Q and A</a></li><li class="active"><a href="paper">Paper</a></li><li><a href="talks_and_media">Talks & Media</a></li><li><a href="about_us">About Us</a></li></ul>
                     <div class="pull-right twitter-div" >
 <a href="https://twitter.com/zerocashproject" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @zerocashproject</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -78,21 +78,25 @@
                 <div class="span6 offset3">
                             
 
-      <h1></h1>
-<p>Zerocash is a new <em>privacy-preserving</em> protocol for digital currency designed to sit on top of <a href="https://bitcoin.org/">Bitcoin</a>, or similar currencies. The Zerocash protocol fixes a major weakness in Bitcoin that deprives users of the privacy guarantees we take for granted in using credit cards and cash: that our neighbors, friends, and everyone else doesn't see what we bought or for how much.</p>
-<p>The zerocash protocol extends Bitcoin and enables users to pay one another directly, via payment transactions that reveal neither the origin, destination, or amount of the payment. This is a marked improvement on the protocols underlying Bitcoin and similar decentralized digital currency systems, where every transaction in the system is public to the whole world.</p>
-<p>Zerocash improves on an earlier protocol, <a href="http://zerocoin.org/media/pdf/ZerocoinOakland.pdf">Zerocoin</a>, developed by some of the same authors, both in functionality (Zerocoin only hides a payment's origin, but not the amount or destination) and in efficiency (Zerocash transactions are less than 1KB and take less than 6ms to verify).</p>
-<h3 id="how-does-zerocash-work">How does Zerocash work?</h3>
-<p>The Zerocash protocol is designed to extend the Bitcoin protocol and software, by adding efficient transaction privacy as an overlay to Bitcoin's existing features. Where Zerocash differs from Bitcoin is in the way that transactions are formulated. Standard Bitcoin transactions consist of a source address, destination address and transaction amount. These transactions are stored on a public ledger called the "block chain" and can be <a href="http://blockchain.info">viewed by any party</a>. Zerocash transactions, on the other hand, contain no public information about the source, destination or <em>amount</em> of any transaction, instead using a Zero-knowledge proof of correctness. Users can covert bitcoins into zerocoins, send zerocoins to other users, and split or merge zerocoins they own in any way that preserves the total value. Users may also convert zerocoins back into bitcoins, though in principle this is not necessary: all transactions can be made in terms of zerocoins.</p>
-<h3 id="more-information">More information</h3>
-<p>For more information on Zerocash, see:</p>
-<ul>
-<li>A brief summary of <a href="how_zerocash_works">how zerocash works</a>.</li>
-<li>The conference version of our <a href="media/pdf/zerocash-oakland2014.pdf">paper</a>, presented at the <a href="http://www.ieee-security.org/TC/SP2014/">2014 IEEE Security &amp; Privacy Symposium</a>. </li>
-<li>Our <a href="q_and_a">Q&amp;A page</a>.</li>
-<li>A selection of <a href="talks_and_media">talks and news stories about Zerocash</a>. </li>
-<li>The list of <a href="about_us">Zerocash project members</a>.</li>
-</ul>
+      <h2 id="paper">Paper</h2>
+<hr />
+<p>The Zerocash system is described and analyzed in detail in the paper below (and the references therein). For more accessible high-level reviews, see our <a href="talks_and_media">talks and media</a>.</p>
+<h3 id="zerocash-decentralized-anonymous-payments-from-bitcoin">Zerocash: Decentralized Anonymous Payments from Bitcoin</h3>
+<p><strong>Authors:</strong>
+Eli Ben-Sasson,
+Alessandro Chiesa,
+Christina Garman,
+Matthew Green,
+Ian Miers,
+Eran Tromer,
+and Madars Virza</p>
+<p><strong>Abstract:</strong></p>
+<p>Bitcoin is the first digital currency to see widespread adoption. While payments are conducted between pseudonyms, Bitcoin cannot offer strong privacy guarantees: payment transactions are recorded in a public decentralized ledger, from which much information can be deduced. Zerocoin (Miers et al., IEEE S&amp;P 2013) tackles some of these privacy issues by unlinking transactions from the payment's origin. Yet, it still reveals payments' destinations and amounts, and is limited in functionality.</p>
+<p>In this paper, we construct a full-fledged ledger-based digital currency with strong privacy guarantees. Our results leverage recent advances in zero-knowledge Succinct Non-interactive ARguments of Knowledge (zk-SNARKs).</p>
+<p>First, we formulate and construct decentralized anonymous payment schemes (DAP schemes). A DAP scheme enables users to directly pay each other privately: the corresponding transaction hides the payment's origin, destination, and transferred amount. We provide formal definitions and proofs of the construction's security.</p>
+<p>Second, we build Zerocash, a practical instantiation of our DAP scheme construction. In Zerocash, transactions are less than 1 kB and take under 6 ms to verify --- orders of magnitude more efficient than the less-anonymous Zerocoin and competitive with plain Bitcoin.</p>
+<p><strong>Publication info:</strong> Proceedings of the <a href="http://www.ieee-security.org/TC/SP2014/">2014 IEEE Symposium on Security and Privacy</a></p>
+<p><strong>Files:</strong> <a href="media/pdf/zerocash-oakland2014.pdf">PDF of conference version</a> and <a href="media/pdf/zerocash-extended-20140518.pdf">PDF of extended version</a></p>
 
                 </div>
             </div>
