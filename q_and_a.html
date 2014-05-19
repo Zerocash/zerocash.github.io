@@ -91,6 +91,7 @@
 <li><a href="#what-does-zerocash-do">What does Zerocash do?</a></li>
 <li><a href="#what-types-of-transactions-does-zerocash-use">What types of transactions does Zerocash use?</a></li>
 <li><a href="#how-are-zerocash-transactions-checked-for-correctness">How are Zerocash transactions checked for correctness?</a></li>
+<li><a href="#will-zerocash-be-deployed-in-bitcoin-the-currency">Will Zerocash be deployed in Bitcoin the Currency?</a></li>
 <li><a href="#how-will-zerocash-be-released-and-deployed">How will Zerocash be released and deployed?</a></li>
 <li><a href="#what-about-criminal-use-of-zerocash">What about criminal use of Zerocash?</a></li>
 <li><a href="#what-about-the-balance-between-accountability-and-privacy">What about the balance between accountability and privacy?</a></li>
@@ -146,6 +147,9 @@ A pour transaction allows a user to make a private payment, by consuming some nu
 <h3 id="how-are-zerocash-transactions-checked-for-correctness">How are Zerocash transactions checked for correctness?</h3>
 <p>For a mint transaction, the commitment cointained therein is constructed so that that anyone can verify that the committed coin has the claimed value.</p>
 <p>For a pour transaction, anyone can verify that the zero-knowledge proof contained therein is valid (and that a few other simple invariants hold). For efficiency, however, Zerocash does not use "any" zero-knowledge proof, but leverages <em>zero-knowledge Succinct Non-interactive ARguments of Knowledge</em> (zk-SNARK) systems, which are zero-knowledge proofs that are particularly short and easy to verify. Specifically, Zerocash uses zk-SNARKs constructed by <a href="http://www.scipr-lab.org/">SCIPR Lab</a>, which are described in <a href="http://eprint.iacr.org/2013/879">BCTV13</a>; such proofs are less than 300 bytes long and can be verified in only a few milliseconds.</p>
+<h3 id="will-zerocash-be-deployed-in-bitcoin-the-currency">Will Zerocash be deployed in Bitcoin the Currency?</h3>
+<p>No. The Bitcoin core devs rightly decided that Zerocoin was too cutting edge to deploy in Bitcoin itself and, specifically in the case of the old Zerocoin protocol, had too many performance concerns.  Although the Zerocash protocol fixes the performance concerns, the other issue is still present and we think rather valid: Bitcoin has a lot to lose and so needs to be cautious.  </p>
+<p>Bitcoin refers to a protocol and software stack originally developed by Satoshi Nakamoto. It also refers to the Bitcoin currency, which is one of several crypto-currencies that use Nakamoto's protocol or a variant. This leads to some confusion in terminology: when our paper and parts of this website refers to Bitcoin, we are usually referring to Bitcoin the protocol and codebase that underlies both Bitcoin the currency and numerous other altcoins, not the actual currency itself.</p>
 <h3 id="how-will-zerocash-be-released-and-deployed">How will Zerocash be released and deployed?</h3>
 <p>We plan to release an altcoin that uses the Zerocash protocol. At present, we are working on finishing a first release of the client software, based on the Bitcoin 0.9.1 codebase. (There is a big difference between research software, and a clean implementation that is working and usable!) Ultimately, we hope to achieve a production-quality client that can be used to create a real privacy-preserving currency.</p>
 <p>For updates, follow <a href="https://twitter.com/zerocashproject" title="Zerocash Project">@ZerocashProject</a> on Twitter or check this website.</p>
